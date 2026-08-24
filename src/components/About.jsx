@@ -46,7 +46,7 @@ export default function About() {
             <div className="grid grid-cols-2 gap-6">
               <div className="p-8 rounded-xl bg-white shadow-lg text-center">
                 <p className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
-                  500+
+                  200+
                 </p>
                 <p className="text-gray-600 font-semibold">Projects Done</p>
               </div>

@@ -146,10 +146,10 @@ export default function Contact() {
                   required
                 >
                   <option value="">Select budget</option>
-                  <option value="500-1000">₹500 - ₹1000</option>
-                  <option value="1000-5000">₹1000 - ₹5000</option>
-                  <option value="5000-10000">₹5000 - ₹10000</option>
-                  <option value="10000+">₹10000+</option>
+                  <option value="1000-2000">₹1000 - ₹2000</option>
+                  <option value="2000-2500">₹2000 - ₹2500</option>
+                  <option value="2500-30000">₹2500 - ₹30000</option>
+                  <option value="30000+">₹30000+</option>
                 </select>
               </div>
             </div>
@@ -179,12 +179,12 @@ export default function Contact() {
             <div className="text-center">
               <p className="text-3xl mb-2">✉️</p>
               <p className="text-gray-600 font-semibold">Email</p>
-              <p className="text-blue-600">hello@collegehub.com</p>
+              <p className="text-blue-600">vaibhavrahane37@gmail.com</p>
             </div>
             <div className="text-center">
               <p className="text-3xl mb-2">📱</p>
               <p className="text-gray-600 font-semibold">Phone</p>
-              <p className="text-blue-600">+91 9876543210</p>
+              <p className="text-blue-600">+91 9552839935</p>
             </div>
             <div className="text-center">
               <p className="text-3xl mb-2">💬</p>

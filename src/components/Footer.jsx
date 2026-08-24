@@ -40,7 +40,13 @@ export default function Footer() {
               <a href="#" className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center hover:bg-purple-600 transition">
                 𝕏
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center hover:bg-purple-600 transition">
+              <a
+                href="https://www.linkedin.com/in/vaibhav-rahane-2871052a5/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Vaibhav Rahane on LinkedIn"
+                className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center hover:bg-purple-600 transition"
+              >
                 in
               </a>
             </div>
@@ -55,7 +61,7 @@ export default function Footer() {
             <div className="flex gap-6 text-gray-400 mt-4 md:mt-0">
               <a href="#" className="hover:text-blue-400 transition">Privacy Policy</a>
               <a href="#" className="hover:text-blue-400 transition">Terms of Service</a>
-              <a href="#" className="hover:text-blue-400 transition">Contact Us</a>
+              <a href="#contact" className="hover:text-blue-400 transition">Contact Us</a>
             </div>
           </div>
         </div>
