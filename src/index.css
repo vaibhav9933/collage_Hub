@@ -8,19 +8,51 @@
   box-sizing: border-box;
 }
 
+:root {
+  --ink: #172033;
+  --paper: #f8f7f3;
+  --coral: #ef6f61;
+  --teal: #137c80;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #0f172a;
-  background: radial-gradient(circle at top left, rgba(59,130,246,0.15), transparent 22%),
-              radial-gradient(circle at 90% 15%, rgba(168,85,247,0.14), transparent 18%),
-              radial-gradient(circle at 50% 85%, rgba(56,189,248,0.08), transparent 26%);
-  background-size: 280% 280%, 240% 240%, 260% 260%;
-  animation: backgroundShift 40s ease infinite;
+  min-width: 320px;
+}
+
+body {
+  font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  color: var(--ink);
+  background: var(--paper);
   overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Georgia, 'Times New Roman', serif;
+  letter-spacing: 0;
+}
+
+::selection {
+  color: #fff;
+  background: var(--coral);
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 3px solid rgba(239, 111, 97, 0.65);
+  outline-offset: 3px;
 }
 
 @keyframes backgroundShift {
@@ -98,4 +130,18 @@ body {
 .btn-soft:hover {
   transform: translateY(-3px);
   box-shadow: 0 18px 40px rgba(59, 130, 246, 0.18);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

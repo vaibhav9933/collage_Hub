@@ -2,21 +2,22 @@ import { useState } from 'react'
 
 const recipientEmail = import.meta.env.VITE_FORMSUBMIT_EMAIL
 
-export default function Contact() {
+export default function Contact({ onOpenLegal }) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     project: '',
     budget: '',
-    message: ''
+    message: '',
+    termsAccepted: false
   })
   const [status, setStatus] = useState('')
 
   const handleChange = (e) => {
-    const { name, value } = e.target
+    const { name, value, type, checked } = e.target
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: type === 'checkbox' ? checked : value
     }))
   }
 
@@ -39,6 +40,7 @@ export default function Contact() {
     body.append('budget', formData.budget)
     body.append('message', formData.message)
     body.append('reply_to', formData.email)
+    body.append('terms_accepted', 'Yes')
 
     try {
       const response = await fetch(`https://formsubmit.co/${recipientEmail}`, {
@@ -55,17 +57,17 @@ export default function Contact() {
       }
 
       setStatus('success')
-      setFormData({ name: '', email: '', project: '', budget: '', message: '' })
+      setFormData({ name: '', email: '', project: '', budget: '', message: '', termsAccepted: false })
     } catch (error) {
       setStatus('error')
     }
   }
 
   return (
-    <section id="contact" className="py-20 px-4 bg-gray-50">
+    <section id="contact" className="bg-[#eef4f1] px-4 py-20">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="mb-4 text-4xl font-bold text-[#172033] md:text-5xl">
             Get Your Project Done
           </h2>
           <p className="text-xl text-gray-600">
@@ -73,7 +75,7 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+        <div className="rounded-3xl border border-white bg-white p-6 shadow-xl shadow-slate-900/5 sm:p-8 md:p-12">
           <form onSubmit={handleSubmit} className="space-y-6">
             {status === 'missing-config' && (
               <div className="rounded-2xl border border-rose-300 bg-rose-50 p-4 text-sm text-rose-700">
@@ -167,9 +169,27 @@ export default function Contact() {
               ></textarea>
             </div>
 
+            <label className="flex items-start gap-3 text-sm text-gray-600">
+              <input
+                type="checkbox"
+                name="termsAccepted"
+                checked={formData.termsAccepted}
+                onChange={handleChange}
+                className="mt-1 h-4 w-4 accent-blue-600"
+                required
+              />
+              <span>
+                I agree to the{' '}
+                <button type="button" onClick={() => onOpenLegal('terms')} className="font-semibold text-blue-600 underline hover:text-purple-600">
+                  Terms and Conditions
+                </button>
+                {' '}and confirm that the information provided is accurate.
+              </span>
+            </label>
+
             <button
               type="submit"
-              className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-lg font-bold text-lg hover:shadow-xl transition transform hover:-translate-y-1"
+                className="w-full rounded-xl bg-[#172033] py-4 text-lg font-bold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-[#ef6f61]"
             >
               Send Request
             </button>

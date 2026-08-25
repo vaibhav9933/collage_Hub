@@ -1,8 +1,8 @@
-export default function Footer() {
+export default function Footer({ onOpenLegal }) {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-gray-900 text-white py-12 px-4">
+    <footer className="bg-[#172033] px-4 py-12 text-white">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
@@ -34,10 +34,10 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-bold mb-4">Follow Us</h4>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center hover:bg-purple-600 transition">
+              <a href="#" aria-label="Facebook" className="flex h-10 w-10 items-center justify-center rounded-full bg-[#2a3853] transition hover:bg-[#ef6f61]">
                 f
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center hover:bg-purple-600 transition">
+              <a href="#" aria-label="X" className="flex h-10 w-10 items-center justify-center rounded-full bg-[#2a3853] transition hover:bg-[#ef6f61]">
                 𝕏
               </a>
               <a
@@ -45,7 +45,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Visit Vaibhav Rahane on LinkedIn"
-                className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center hover:bg-purple-600 transition"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-[#2a3853] transition hover:bg-[#ef6f61]"
               >
                 in
               </a>
@@ -58,9 +58,9 @@ export default function Footer() {
             <p className="text-gray-400">
               © {currentYear} College Project Hub. All rights reserved.
             </p>
-            <div className="flex gap-6 text-gray-400 mt-4 md:mt-0">
-              <a href="#" className="hover:text-blue-400 transition">Privacy Policy</a>
-              <a href="#" className="hover:text-blue-400 transition">Terms of Service</a>
+            <div className="mt-4 flex flex-wrap justify-center gap-x-6 gap-y-2 text-gray-400 md:mt-0 md:justify-end">
+              <button type="button" onClick={() => onOpenLegal('privacy')} className="hover:text-blue-400 transition">Privacy Policy</button>
+              <button type="button" onClick={() => onOpenLegal('terms')} className="hover:text-blue-400 transition">Terms of Service</button>
               <a href="#contact" className="hover:text-blue-400 transition">Contact Us</a>
             </div>
           </div>

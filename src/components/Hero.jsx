@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section id="home" className="relative pt-32 pb-24 px-4 overflow-hidden">
+    <section id="home" className="relative overflow-hidden px-4 pb-20 pt-28 sm:pt-36 lg:pb-28">
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute left-[-15%] top-16 h-72 w-72 rounded-full bg-sky-500/20 blur-3xl animate-blob"></div>
         <div className="absolute right-[-10%] top-32 h-80 w-80 rounded-full bg-fuchsia-500/25 blur-3xl animate-blob animation-delay-3000"></div>
@@ -11,41 +11,41 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto relative">
         <div className="grid gap-12 lg:grid-cols-2 items-center">
           <div className="space-y-8">
-            <div className="inline-flex items-center gap-3 rounded-full border border-slate-300/90 bg-white/90 px-4 py-2 text-sm font-medium text-slate-700 shadow-sm">
-              <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-sky-600/10 text-sky-600">🔥</span>
+            <div className="inline-flex items-center gap-3 rounded-full border border-[#f3c2ba] bg-[#fff4f0] px-4 py-2 text-sm font-semibold text-[#9b4038] shadow-sm">
+              <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#ef6f61] text-white">✦</span>
               Trusted by 500+ students for college projects
             </div>
             <div className="space-y-6">
               <div>
-                <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight text-slate-950">
+                <h1 className="text-5xl font-extrabold tracking-tight text-[#172033] md:text-7xl">
                   Build stunning college projects with
-                  <span className="bg-gradient-to-r from-sky-600 via-purple-600 to-fuchsia-600 bg-clip-text text-transparent"> premium support</span>
+                  <span className="text-[#ef6f61]"> premium support</span>
                 </h1>
               </div>
               <p className="max-w-2xl text-xl leading-9 text-slate-700">
                 Simple, fast and deployable for free. Get professional project work for major, minor, and departmental assignments with clean code and reliable delivery.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a href="#projects" className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-sky-600 to-fuchsia-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-sky-500/20 hover:opacity-95 transition">
+              <div className="flex flex-col gap-3 sm:flex-row">
+                <a href="#projects" className="inline-flex items-center justify-center rounded-full bg-[#172033] px-8 py-4 text-base font-semibold text-white shadow-lg shadow-slate-900/15 transition hover:-translate-y-0.5 hover:bg-[#26324a]">
                   Explore Projects
                 </a>
-                <a href="#contact" className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-8 py-4 text-base font-semibold text-slate-900 hover:bg-slate-100 transition">
+                <a href="#contact" className="inline-flex items-center justify-center rounded-full border border-[#c7cbd2] bg-white px-8 py-4 text-base font-semibold text-[#172033] transition hover:-translate-y-0.5 hover:border-[#ef6f61] hover:text-[#b94d43]">
                   Request a Quote
                 </a>
               </div>
             </div>
 
             <div className="grid gap-4 sm:grid-cols-3">
-              <div className="rounded-3xl border border-slate-200/80 bg-white/95 p-5 shadow-sm">
-                <p className="text-3xl font-bold text-sky-600">24h</p>
+              <div className="rounded-2xl border border-slate-200 bg-white/90 p-5 shadow-sm">
+                <p className="text-3xl font-bold text-[#137c80]">24h</p>
                 <p className="mt-2 text-sm text-slate-600">Fast response time</p>
               </div>
-              <div className="rounded-3xl border border-slate-200/80 bg-white/95 p-5 shadow-sm">
-                <p className="text-3xl font-bold text-fuchsia-600">99%</p>
+              <div className="rounded-2xl border border-slate-200 bg-white/90 p-5 shadow-sm">
+                <p className="text-3xl font-bold text-[#ef6f61]">99%</p>
                 <p className="mt-2 text-sm text-slate-600">Student satisfaction</p>
               </div>
-              <div className="rounded-3xl border border-slate-200/80 bg-white/95 p-5 shadow-sm">
-                <p className="text-3xl font-bold text-cyan-600">30+</p>
+              <div className="rounded-2xl border border-slate-200 bg-white/90 p-5 shadow-sm">
+                <p className="text-3xl font-bold text-[#137c80]">30+</p>
                 <p className="mt-2 text-sm text-slate-600">Tech skills covered</p>
               </div>
             </div>

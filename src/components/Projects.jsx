@@ -66,10 +66,10 @@ export default function Projects() {
   const filtered = filter === 'all' ? projects : projects.filter(p => p.category === filter)
 
   return (
-    <section id="projects" className="py-20 px-4 bg-white">
+    <section id="projects" className="bg-white px-4 py-20">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <p className="mb-3 text-sm uppercase tracking-[0.35em] text-slate-500">Portfolio</p>
+          <p className="mb-3 text-sm uppercase tracking-[0.35em] text-[#ef6f61]">Portfolio</p>
           <h2 className="text-4xl md:text-5xl font-extrabold text-slate-950 mb-4">
             Project showcase built for impact.
           </h2>
@@ -78,15 +78,15 @@ export default function Projects() {
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="mb-12 flex gap-2 overflow-x-auto pb-2 md:flex-wrap md:justify-center">
           {categories.map(cat => (
             <button
               key={cat.name}
               onClick={() => setFilter(cat.name)}
               className={`px-6 py-2 rounded-full font-semibold transition ${
                 filter === cat.name
-                  ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white'
-                  : 'bg-white border-2 border-gray-300 text-gray-700 hover:border-blue-600'
+                  ? 'bg-[#172033] text-white'
+                    : 'border border-slate-300 bg-white text-gray-700 hover:border-[#ef6f61]'
               }`}
             >
               {cat.label}
@@ -98,19 +98,23 @@ export default function Projects() {
           {filtered.map(project => (
             <div
               key={project.id}
-              className="group overflow-hidden rounded-[2rem] border border-slate-200/80 bg-slate-950/5 shadow-lg shadow-slate-200/30 transition duration-500 hover:-translate-y-2 hover:shadow-2xl"
+              className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
             >
-              <div className="relative overflow-hidden bg-gradient-to-br from-sky-500 via-purple-500 to-fuchsia-500 p-8 text-6xl text-white transition duration-500 group-hover:scale-105">
+              <div className="relative overflow-hidden bg-[#172033] p-8 text-6xl text-white transition duration-500 group-hover:scale-105">
                 <div className="absolute inset-0 opacity-40 bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.35),_transparent_25%)]"></div>
                 <div className="relative z-10 flex h-40 items-center justify-center">{project.image}</div>
               </div>
               <div className="p-6 bg-white">
                 <h3 className="text-xl font-semibold text-slate-950 mb-2">{project.title}</h3>
-                <p className="text-sm text-sky-600 font-semibold mb-3">{project.tech}</p>
+                <p className="mb-3 text-sm font-semibold text-[#137c80]">{project.tech}</p>
                 <p className="text-slate-600 mb-6">{project.description}</p>
-                <button className="w-full rounded-full bg-slate-950 px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-950/20 transition hover:bg-slate-800">
-                  View Project
-                </button>
+                <div className="rounded-xl border border-[#f3c2ba] bg-[#fff4f0] px-4 py-3 text-center text-sm font-semibold text-[#9b4038]">
+                  <p>Project sample coming soon</p>
+                  <p className="mt-1 font-normal text-[#9b4038]">We are preparing this showcase. Contact us for project details.</p>
+                  <a href="#contact" className="mt-3 inline-flex rounded-full bg-slate-950 px-4 py-2 text-xs font-semibold text-white transition hover:bg-slate-800">
+                    Ask for help
+                  </a>
+                </div>
               </div>
             </div>
           ))}

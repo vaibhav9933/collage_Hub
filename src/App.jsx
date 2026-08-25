@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Services from './components/Services'
@@ -7,8 +7,31 @@ import Testimonials from './components/Testimonials'
 import About from './components/About'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import Legal from './components/Legal'
 
 function App() {
+  const [legalDocument, setLegalDocument] = useState(null)
+  useEffect(() => {
+    const blockSourceShortcuts = (event) => {
+      const key = event.key.toLowerCase()
+      if ((event.ctrlKey || event.metaKey) && (key === 'u' || key === 's')) {
+        event.preventDefault()
+      }
+      if (event.key === 'F12' || (event.ctrlKey && event.shiftKey && ['i', 'j', 'c'].includes(key))) {
+        event.preventDefault()
+      }
+    }
+
+    const blockContextMenu = (event) => event.preventDefault()
+    document.addEventListener('keydown', blockSourceShortcuts)
+    document.addEventListener('contextmenu', blockContextMenu)
+
+    return () => {
+      document.removeEventListener('keydown', blockSourceShortcuts)
+      document.removeEventListener('contextmenu', blockContextMenu)
+    }
+  }, [])
+
   return (
     <div className="relative overflow-hidden bg-slate-950/5">
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
@@ -23,8 +46,9 @@ function App() {
       <Projects />
       <Testimonials />
       <About />
-      <Contact />
-      <Footer />
+      <Contact onOpenLegal={setLegalDocument} />
+      <Legal documentType={legalDocument} onClose={() => setLegalDocument(null)} />
+      <Footer onOpenLegal={setLegalDocument} />
     </div>
   )
 }
