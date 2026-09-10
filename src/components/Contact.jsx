@@ -64,18 +64,19 @@ export default function Contact({ onOpenLegal }) {
   }
 
   return (
-    <section id="contact" className="bg-[#eef4f1] px-4 py-20">
+    <section id="contact" className="bg-[#117c72] px-4 py-20">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="mb-4 text-4xl font-bold text-[#172033] md:text-5xl">
+          <p className="mb-3 text-sm uppercase tracking-[0.35em] text-[#c6f04a]">Contact / 05</p>
+          <h2 className="mb-4 text-4xl font-bold text-white md:text-5xl">
             Get Your Project Done
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-white/75">
             Fill out the form below and we'll get back to you within 24 hours
           </p>
         </div>
 
-        <div className="rounded-3xl border border-white bg-white p-6 shadow-xl shadow-slate-900/5 sm:p-8 md:p-12">
+        <div className="border border-white/20 bg-[#f5f4ef] p-6 sm:p-8 md:p-12">
           <form onSubmit={handleSubmit} className="space-y-6">
             {status === 'missing-config' && (
               <div className="rounded-2xl border border-rose-300 bg-rose-50 p-4 text-sm text-rose-700">
@@ -101,7 +102,7 @@ export default function Contact({ onOpenLegal }) {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="John Doe"
-                  className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-blue-600 focus:outline-none transition"
+                  className="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 focus:border-[#117c72] focus:outline-none transition"
                   required
                 />
               </div>
@@ -113,7 +114,7 @@ export default function Contact({ onOpenLegal }) {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="john@example.com"
-                  className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-blue-600 focus:outline-none transition"
+                  className="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 focus:border-[#117c72] focus:outline-none transition"
                   required
                 />
               </div>
@@ -126,7 +127,7 @@ export default function Contact({ onOpenLegal }) {
                   name="project"
                   value={formData.project}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-blue-600 focus:outline-none transition"
+                  className="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 focus:border-[#117c72] focus:outline-none transition"
                   required
                 >
                   <option value="">Select a project type</option>
@@ -144,7 +145,7 @@ export default function Contact({ onOpenLegal }) {
                   name="budget"
                   value={formData.budget}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-blue-600 focus:outline-none transition"
+                  className="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 focus:border-[#117c72] focus:outline-none transition"
                   required
                 >
                   <option value="">Select budget</option>
@@ -164,7 +165,7 @@ export default function Contact({ onOpenLegal }) {
                 onChange={handleChange}
                 placeholder="Tell us about your project requirements..."
                 rows="5"
-                className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-blue-600 focus:outline-none transition resize-none"
+                className="w-full resize-none rounded-lg border border-slate-300 bg-white px-4 py-3 focus:border-[#117c72] focus:outline-none transition"
                 required
               ></textarea>
             </div>
@@ -180,7 +181,7 @@ export default function Contact({ onOpenLegal }) {
               />
               <span>
                 I agree to the{' '}
-                <button type="button" onClick={() => onOpenLegal('terms')} className="font-semibold text-blue-600 underline hover:text-purple-600">
+                <button type="button" onClick={() => onOpenLegal('terms')} className="font-semibold text-[#117c72] underline hover:text-[#ff6b5e]">
                   Terms and Conditions
                 </button>
                 {' '}and confirm that the information provided is accurate.
@@ -189,7 +190,7 @@ export default function Contact({ onOpenLegal }) {
 
             <button
               type="submit"
-                className="w-full rounded-xl bg-[#172033] py-4 text-lg font-bold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-[#ef6f61]"
+                className="w-full rounded-lg bg-[#111318] py-4 text-lg font-bold text-white transition hover:bg-[#ff6b5e]"
             >
               Send Request
             </button>
@@ -199,17 +200,17 @@ export default function Contact({ onOpenLegal }) {
             <div className="text-center">
               <p className="text-3xl mb-2">✉️</p>
               <p className="text-gray-600 font-semibold">Email</p>
-              <p className="text-blue-600">vaibhavrahane37@gmail.com</p>
+              <p className="text-[#117c72]">vaibhavrahane37@gmail.com</p>
             </div>
             <div className="text-center">
               <p className="text-3xl mb-2">📱</p>
               <p className="text-gray-600 font-semibold">Phone</p>
-              <p className="text-blue-600">+91 9552839935</p>
+              <p className="text-[#117c72]">+91 9552839935</p>
             </div>
             <div className="text-center">
               <p className="text-3xl mb-2">💬</p>
               <p className="text-gray-600 font-semibold">Chat</p>
-              <p className="text-blue-600">24/7 Support</p>
+              <p className="text-[#117c72]">24/7 Support</p>
             </div>
           </div>
         </div>

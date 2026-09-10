@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">College Hub logo</title>
+  <desc id="desc">Neon green College Hub monogram on a black background</desc>
+  <rect width="256" height="256" fill="#000"/>
+  <path fill="#00ff3b" d="M72 82c-25 0-45 20-45 46s20 46 45 46h32l-18-18H72c-16 0-28-12-28-28s12-28 28-28h32V82H72Z"/>
+  <path fill="#00ff3b" d="M107 103v50l19 19v-31h39v31l19-19v-50l-19 19v1h-39v-1l-19-19Z"/>
+  <path fill="#00ff3b" d="M184 82v92h20V82l-20 14v-14Z"/>
+</svg>

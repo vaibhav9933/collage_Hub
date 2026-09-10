@@ -33,14 +33,14 @@ export default function Services() {
   ]
 
   return (
-    <section id="services" className="bg-[#eef4f1] px-4 py-20">
+    <section id="services" className="bg-[#111318] px-4 py-20 text-white">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <p className="mb-3 text-sm uppercase tracking-[0.35em] text-[#137c80]">Services</p>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-slate-950 mb-4">
+        <div className="text-center mb-10">
+          <p className="mb-3 text-sm uppercase tracking-[0.35em] text-[#c6f04a]">Services / 01</p>
+          <h2 className="text-4xl font-extrabold text-white md:text-5xl mb-4">
             Modern solutions for every college project.
           </h2>
-          <p className="mx-auto max-w-2xl text-lg text-slate-600">
+          <p className="mx-auto max-w-2xl text-lg text-slate-400">
             Choose your area of expertise and let us deliver clean, secure, and deployable project work.
           </p>
         </div>
@@ -49,14 +49,14 @@ export default function Services() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-2xl border border-white bg-white p-7 text-slate-950 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+              className="group relative overflow-hidden border border-slate-700 bg-[#191c22] p-6 text-white transition duration-300 hover:border-[#c6f04a]"
             >
-              <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-[#e7f3f1] text-3xl text-[#137c80] shadow-sm transition group-hover:scale-105">
+              <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-[#c6f04a] text-2xl text-[#111318]">
                 {service.icon}
               </div>
               <h3 className="text-2xl font-semibold mb-3">{service.title}</h3>
-              <p className="text-slate-600 mb-6">{service.description}</p>
-              <a href="#contact" className="inline-flex items-center gap-2 text-sm font-semibold text-[#137c80] transition hover:text-[#ef6f61]">
+              <p className="text-slate-400 mb-6">{service.description}</p>
+              <a href="#contact" className="inline-flex items-center gap-2 text-sm font-semibold text-[#c6f04a] transition hover:text-white">
                 <span>Get help</span>
                 <span>→</span>
               </a>

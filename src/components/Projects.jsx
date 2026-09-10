@@ -66,11 +66,11 @@ export default function Projects() {
   const filtered = filter === 'all' ? projects : projects.filter(p => p.category === filter)
 
   return (
-    <section id="projects" className="bg-white px-4 py-20">
+    <section id="projects" className="bg-[#f5f4ef] px-4 py-20">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <p className="mb-3 text-sm uppercase tracking-[0.35em] text-[#ef6f61]">Portfolio</p>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-slate-950 mb-4">
+        <div className="text-center mb-10">
+          <p className="mb-3 text-sm uppercase tracking-[0.35em] text-[#ff6b5e]">Portfolio / 02</p>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-[#111318] mb-4">
             Project showcase built for impact.
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-slate-600">
@@ -98,15 +98,14 @@ export default function Projects() {
           {filtered.map(project => (
             <div
               key={project.id}
-              className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+              className="group overflow-hidden border border-[#d8d8d0] bg-white transition duration-300 hover:border-[#ff6b5e]"
             >
-              <div className="relative overflow-hidden bg-[#172033] p-8 text-6xl text-white transition duration-500 group-hover:scale-105">
-                <div className="absolute inset-0 opacity-40 bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.35),_transparent_25%)]"></div>
+              <div className="relative overflow-hidden bg-[#111318] p-8 text-6xl text-white">
                 <div className="relative z-10 flex h-40 items-center justify-center">{project.image}</div>
               </div>
               <div className="p-6 bg-white">
                 <h3 className="text-xl font-semibold text-slate-950 mb-2">{project.title}</h3>
-                <p className="mb-3 text-sm font-semibold text-[#137c80]">{project.tech}</p>
+                <p className="mb-3 text-sm font-semibold text-[#117c72]">{project.tech}</p>
                 <p className="text-slate-600 mb-6">{project.description}</p>
                 <div className="rounded-xl border border-[#f3c2ba] bg-[#fff4f0] px-4 py-3 text-center text-sm font-semibold text-[#9b4038]">
                   <p>Project sample coming soon</p>
